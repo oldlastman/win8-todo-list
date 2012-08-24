@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Package xmlns="http://schemas.microsoft.com/appx/2010/manifest">
+
+  <Identity
+    Name="2c8a429e-d81f-4d88-8fb0-5a4f7b7dbff8"
+    Version="1.0.0.0"
+    Publisher="CN=oldla_000" />
+
+  <Properties>
+    <DisplayName>test3_lecturaEscritura_indexdDB</DisplayName>
+    <PublisherDisplayName>oldla_000</PublisherDisplayName>
+    <Logo>images\storelogo.png</Logo>
+  </Properties>
+
+  <Prerequisites>
+    <OSMinVersion>6.2.0</OSMinVersion>
+    <OSMaxVersionTested>6.2.0</OSMaxVersionTested>
+  </Prerequisites>
+
+  <Resources>
+    <Resource Language="x-generate" />
+  </Resources>
+
+  <Applications>
+    <Application 
+      Id="App"
+      StartPage="default.html">
+
+      <VisualElements
+        DisplayName="test3_lecturaEscritura_indexdDB"
+        Logo="images\logo.png"
+        SmallLogo="images\smalllogo.png"
+        Description="test3_lecturaEscritura_indexdDB"
+        ForegroundText="light"
+        BackgroundColor="#464646">
+
+        <DefaultTile ShowName="allLogos" />
+        <SplashScreen Image="images\splashscreen.png" />
+
+      </VisualElements>
+    </Application>
+  </Applications>
+
+  <Capabilities>
+    <Capability Name="internetClient" />
+  </Capabilities>
+
+</Package>
