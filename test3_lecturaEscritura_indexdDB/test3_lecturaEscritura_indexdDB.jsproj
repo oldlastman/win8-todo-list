@@ -32,7 +32,7 @@
     <ProjectConfiguration Include="Release|x86">
       <Configuration>Release</Configuration>
       <Platform>x86</Platform>
-    </ProjectConfiguration>  
+    </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>2c8a429e-d81f-4d88-8fb0-5a4f7b7dbff8</ProjectGuid>
@@ -51,12 +51,14 @@
       <SubType>Designer</SubType>
     </AppxManifest>
     <Content Include="default.html" />
+    <Content Include="images\efecinco.jpg" />
     <Content Include="images\logo.png" />
     <Content Include="images\smalllogo.png" />
     <Content Include="images\splashscreen.png" />
     <Content Include="images\storelogo.png" />
     <Content Include="js\default.js" />
     <Content Include="css\default.css" />
+    <Content Include="utils\header.html" />
     <None Include="test3_lecturaEscritura_indexdDB_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
