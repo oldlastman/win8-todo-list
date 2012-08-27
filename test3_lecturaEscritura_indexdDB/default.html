@@ -17,7 +17,13 @@
 	<div id="header" role="contentinfo" data-win-control="WinJS.UI.HtmlControl" data-win-options="{uri: '/utils/header.html'}"></div>
 	<div data-win-control="WinJS.UI.ListView"></div>
 	<button type="button" id="AddTodo">Add</button>
-    
+     <div id="setTodoFlyout" data-win-control="WinJS.UI.Flyout" 
+             aria-label="{Format text flyout}">
+            <label for="todoTitle">
+                Título:</label>
+            <br />
+            <input type="text" id="todoTitle" />
+        </div>
 
     <div id="footer" role="contentinfo" data-win-control="WinJS.UI.HtmlControl" data-win-options="{uri: '/utils/footer.html'}"></div>
 </body>
