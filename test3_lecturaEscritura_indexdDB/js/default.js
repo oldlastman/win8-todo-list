@@ -43,6 +43,19 @@
         F5db: F5db,
     });
 
+    var dataArray = [
+{ TodoTitulo: "test" }
+    ];
+
+    var dataList = new WinJS.Binding.List(dataArray);
+
+    // Create a namespace to make the data publicly
+    // accessible. 
+    var publicMembers =
+        {
+            itemList: dataList
+        };
+    WinJS.Namespace.define("DataExample", publicMembers);
 
     app.start();
 })();
@@ -56,6 +69,24 @@ function AddTodo(){
 
 }
 
+
+
+
 function AddTodoFinalizar() {
-  //  document.getElementById("todoTitle").value
+    //  document.getElementById("todoTitle").value
+    var dataArray = [
+        { TodoTitulo: document.getElementById("todoTitle").value }
+    ];
+
+
+    var dataList = new WinJS.Binding.List(dataArray);
+
+    // Create a namespace to make the data publicly
+    // accessible. 
+    var publicMembers =
+        {
+            itemList: dataList
+        };
+    WinJS.Namespace.define("DataExample", publicMembers);
+
 }

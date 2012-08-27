@@ -15,7 +15,25 @@
 </head>
 <body>
 	<div id="header" role="contentinfo" data-win-control="WinJS.UI.HtmlControl" data-win-options="{uri: '/utils/header.html'}"></div>
-	<div data-win-control="WinJS.UI.ListView"></div>
+
+    <div id="mediumListIconTextTemplate" data-win-control="WinJS.Binding.Template">
+        <div style="width: 150px; height: 100px;">
+
+           
+            <div>
+
+                <!-- Displays the "title" field. -->
+                <h4 data-win-bind="innerText: TodoTitulo"></h4>
+
+            </div>
+        </div>
+    </div> 
+    
+    <div id="basicListView"
+        data-win-control="WinJS.UI.ListView" 
+        data-win-options="{itemDataSource : DataExample.itemList.dataSource, itemTemplate: select('#mediumListIconTextTemplate')}">
+    </div>  
+
 	<button type="button" id="AddTodo">Add</button>
      <div id="setTodoFlyout" data-win-control="WinJS.UI.Flyout" 
              aria-label="{Format text flyout}">
