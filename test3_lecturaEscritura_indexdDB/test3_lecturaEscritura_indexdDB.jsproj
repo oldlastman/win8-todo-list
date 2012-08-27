@@ -58,6 +58,7 @@
     <Content Include="images\storelogo.png" />
     <Content Include="js\default.js" />
     <Content Include="css\default.css" />
+    <Content Include="utils\footer.html" />
     <Content Include="utils\header.html" />
     <None Include="test3_lecturaEscritura_indexdDB_TemporaryKey.pfx" />
   </ItemGroup>
