@@ -3,6 +3,10 @@
 (function () {
     "use strict";
 
+    var F5appTitle = "F5-TODO";
+
+    var F5db = null;
+
     var app = WinJS.Application;
     var activation = Windows.ApplicationModel.Activation;
     WinJS.strictProcessing();
@@ -28,6 +32,16 @@
         // asynchronous operation before your application is suspended, call
         // args.setPromise().
     };
+    
+    
+
+    WinJS.Namespace.define("F5todo", {
+        F5appTitle: F5appTitle,
+        //scenarios: scenarios,
+        F5db: F5db,
+    });
+
 
     app.start();
 })();
+
