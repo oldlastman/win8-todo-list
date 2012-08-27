@@ -74,19 +74,11 @@ function AddTodo(){
 
 function AddTodoFinalizar() {
     //  document.getElementById("todoTitle").value
-    var dataArray = [
+    datoActual = 
         { TodoTitulo: document.getElementById("todoTitle").value }
-    ];
+    ;
 
-
-    var dataList = new WinJS.Binding.List(dataArray);
-
-    // Create a namespace to make the data publicly
-    // accessible. 
-    var publicMembers =
-        {
-            itemList: dataList
-        };
-    WinJS.Namespace.define("DataExample", publicMembers);
+    DataExample.itemList.push(datoActual);
+   
 
 }
