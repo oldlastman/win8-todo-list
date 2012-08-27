@@ -34,7 +34,7 @@
     };
     
     app.onready = function (element, options) {
-        document.getElementById("AddTodo").addEventListener("click", AddTodof, false);
+        document.getElementById("AddTodo").addEventListener("click", AddTodo, false);
     }
 
     WinJS.Namespace.define("F5todo", {
@@ -47,8 +47,15 @@
     app.start();
 })();
 
-function AddTodof(){
+function AddTodo(){
     
     var formatTextButton = document.getElementById("AddTodo");
     document.getElementById("setTodoFlyout").winControl.show(formatTextButton);
+    
+    document.getElementById("AddTodoFinalizar").addEventListener("click", AddTodoFinalizar, false);
+
+}
+
+function AddTodoFinalizar() {
+  //  document.getElementById("todoTitle").value
 }
