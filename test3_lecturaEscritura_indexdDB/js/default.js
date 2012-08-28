@@ -43,9 +43,19 @@
         F5db: F5db,
     });
 
-    var dataArray = [
-{ TodoTitulo: "test" }
-    ];
+    //inicialización del objeto de datos para la lista de todo
+    dataList_init();
+
+    app.start();
+})();
+
+
+/*****
+* Inicialización
+******/
+
+function dataList_init() {
+    var dataArray = [];
 
     var dataList = new WinJS.Binding.List(dataArray);
 
@@ -56,9 +66,11 @@
             itemList: dataList
         };
     WinJS.Namespace.define("DataExample", publicMembers);
+}
 
-    app.start();
-})();
+/****
+* Handlers
+*****/
 
 function AddTodo(){
     
@@ -74,11 +86,11 @@ function AddTodo(){
 
 function AddTodoFinalizar() {
     //  document.getElementById("todoTitle").value
-    datoActual = 
-        { TodoTitulo: document.getElementById("todoTitle").value }
-    ;
+    datoActual = { TodoTitulo: document.getElementById("todoTitle").value };
 
     DataExample.itemList.push(datoActual);
    
 
 }
+
+
