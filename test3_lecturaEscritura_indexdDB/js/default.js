@@ -3,9 +3,7 @@
 (function () {
     "use strict";
     WinJS.Utilities.startLog();
-    var F5appTitle = "F5-TODO";
-
-    var F5db = null;
+    
 
     var app = WinJS.Application;
     var activation = Windows.ApplicationModel.Activation;
@@ -37,19 +35,9 @@
         document.getElementById("AddTodo").addEventListener("click", AddTodo, false);
     }
 
-    var dataArray = [{TodoTitulo:'kakichi'}];
 
-    var dataList = new WinJS.Binding.List(dataArray);
-
-    WinJS.Namespace.define("F5todo", {
-        F5appTitle: F5appTitle,
-        //scenarios: scenarios,
-        F5db: F5db,
-        itemList: dataList
-    });
-
-    //inicialización del objeto de datos para la lista de todo
-    //dataList_init();
+    //inicialización del namespace
+    namespace_init();
 
     app.start();
 })();
@@ -60,16 +48,23 @@
 ******/
 
 function namespace_init() {
+    //Nombre app
+    var F5appTitle = "F5-TODO";
+
+    //nombre db e inicialización en null
+    var F5db = null;
+
+    //inicialización de lista de datos
     var dataArray = [];
     var dataList = new WinJS.Binding.List(dataArray);
 
-    // Create a namespace to make the data publicly
-    // accessible. 
-    var publicMembers =
-        {
-            itemList: dataList
-        };
-    WinJS.Namespace.define("DataExample", publicMembers);
+    // Crear el namespace para dejar visibles los datos públicos 
+    WinJS.Namespace.define("F5todo", {
+        F5appTitle: F5appTitle,
+        //scenarios: scenarios,
+        F5db: F5db,
+        itemList: dataList
+    });
 }
 
 /****
@@ -91,7 +86,7 @@ function AddTodo(){
 function AddTodoFinalizar() {
     //  document.getElementById("todoTitle").value
     datoActual = { TodoTitulo: document.getElementById("todoTitle").value };
-    WinJS.log('test:' + F5todo.itemList.getAt(0).TodoTitulo);
+    
     F5todo.itemList.push(datoActual);
    
 
