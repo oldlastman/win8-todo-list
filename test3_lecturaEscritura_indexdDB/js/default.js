@@ -2,7 +2,7 @@
 // http://go.microsoft.com/fwlink/?LinkId=232509
 (function () {
     "use strict";
-
+    WinJS.Utilities.startLog();
     var F5appTitle = "F5-TODO";
 
     var F5db = null;
@@ -37,14 +37,19 @@
         document.getElementById("AddTodo").addEventListener("click", AddTodo, false);
     }
 
+    var dataArray = [{TodoTitulo:'kakichi'}];
+
+    var dataList = new WinJS.Binding.List(dataArray);
+
     WinJS.Namespace.define("F5todo", {
         F5appTitle: F5appTitle,
         //scenarios: scenarios,
         F5db: F5db,
+        itemList: dataList
     });
 
     //inicialización del objeto de datos para la lista de todo
-    dataList_init();
+    //dataList_init();
 
     app.start();
 })();
@@ -54,9 +59,8 @@
 * Inicialización
 ******/
 
-function dataList_init() {
+function namespace_init() {
     var dataArray = [];
-
     var dataList = new WinJS.Binding.List(dataArray);
 
     // Create a namespace to make the data publicly
@@ -87,8 +91,8 @@ function AddTodo(){
 function AddTodoFinalizar() {
     //  document.getElementById("todoTitle").value
     datoActual = { TodoTitulo: document.getElementById("todoTitle").value };
-
-    DataExample.itemList.push(datoActual);
+    WinJS.log('test:' + F5todo.itemList.getAt(0).TodoTitulo);
+    F5todo.itemList.push(datoActual);
    
 
 }
